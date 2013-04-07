@@ -1,4 +1,4 @@
-centos-scripts-Tester
+centos-scripts-tester
 =====================
 
 powershell scripts to test 'centos-scripts'
