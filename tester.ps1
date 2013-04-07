@@ -19,7 +19,7 @@ $breakLine="`n"
 $vmware_exe="C:/Program Files (x86)/VMware/VMware Player/vmplayer.exe"
 $vmware_home="$HOME/Documents/Virtual Machines"
 $vmware_template="centos"
-$vmware_list="srv-build-linux","srv-cit"
+$vmware_list="srv-build-linux","srv-cit","srv-intranet","srv-monitoring","srv-redmine","srv-scm","srv-mail"
 
 ################################
 # PREREQUISTES
