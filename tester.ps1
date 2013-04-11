@@ -19,7 +19,7 @@ $breakLine="`n"
 $vmware_exe="C:/Program Files (x86)/VMware/VMware Player/vmplayer.exe"
 $vmware_home="$HOME/Documents/Virtual Machines"
 $vmware_template="centos"
-$vmware_list="SCM/srv-scm","Production/srv-monitoring","Production/srv-redmine","Production/srv-intranet","Build/srv-build-linux","Build/srv-cit","Network/srv-mail","Network/srv-dhcp","Network/srv-dns","Network/srv-ldap","Other/srv-tomcat"
+$vmware_list="SCM/srv-scm","Production/srv-monitoring","Production/srv-redmine","Production/srv-intranet","Build/srv-build-linux","Build/srv-cit","Network/srv-mail","Network/srv-dhcp","Network/srv-dns","Network/srv-ldap","Other/srv-tomcat","Other/srv-ftp"
 
 ################################
 # PREREQUISTES
