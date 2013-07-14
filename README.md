@@ -1,22 +1,25 @@
 centos-scripts-tester
 =====================
 
-powershell scripts to test 'centos-scripts'
+bash scripts to test 'centos-scripts'
+Note: This example use cygwin, but also work in an unix system. Just update the parameters section.
 
 Prerequistes
 ============
 
-- Install a fresh centos (in $HOME/Documents/Virtual Machines/centos, named centos)
+- Install a fresh centos (in directory /opt/centos-tester, named centos)
+  => Note: you should have the following path to your virtual machine /opt/centos-tester/centos/centos.vmx
 - Get the centos-scripts
 - Install prerequistes
 - Shutdown computer
 
-Note: Location in your $HOME/Documents/Virtual Machines directory.
-
 Execution
 =========
 
-Execute tester.ps1.
+```bash
+  bash tester.bash
+```
+
 That will :
 - create all the 'centos-scripts' vmware.
 - launch them
@@ -28,4 +31,3 @@ Now, execute your server installation script:
   cd /opt/centos-scripts
   bash setup.sh  # here choose your srv-xxx  
 ```
-
