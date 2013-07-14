@@ -29,10 +29,8 @@ And then?
 Now, execute your server installation script in each vmware:
 ```bash
 
-  # First correct network interface
-  mymacaddr=`cat /sys/class/net/eth0/address`
-  sed -i "s/^\(HWADDR=\).*$/\1$mymacaddr/g" /etc/sysconfig/network-scripts/ifcfg-eth0  
-  ifup eth0
+  # First load eth1 (eth0 still have the template mac address).
+  dhclient eth1
   
   # Then, execute scripts:
   cd /opt/centos-scripts
