@@ -17,7 +17,7 @@ vmware_list=("SCM/srv-scm" "Production/srv-monitoring" "Production/srv-redmine" 
 
 echo
 echo "You must have the following prerequistes"
-echo " - Centos installed\n"
+echo " - Centos installed"
 echo " - Prerequistes scripts executed"
 echo
 
@@ -65,11 +65,11 @@ find $vmware_home -maxdepth 1 -type d -not -path "$vmware_home" -not -path "$vmw
 
 echo "Now duplicate vmware"
 
-for index in "${!vmware_list[@]}"; do 
+for index in "${!vmware_list[@]}"; do
   vmware="${vmware_list[$index]}"  
   srv_categ=`dirname "$vmware"`
   srv_name=`basename "$vmware"`
-  echo "working with $item ($vmware : $srv_categ => $srv_name)"
+  echo "working with $item ($vmware : $srv_categ => $srv_name)"  
   
   # duplicate item:
   print_level2 "1- duplicate item"
@@ -84,7 +84,7 @@ for index in "${!vmware_list[@]}"; do
      name=$line
      newname=`echo $line | sed "s/$vmware_template/$srv_name/ig"`
      mv "$name" "$newname"
-  done < /tmp/vmware_files  
+  done < /tmp/vmware_files
   
   # find "$vmware_home/$vmware/" -name "$vmware_template*" -exec mv -v "{}" "`echo {} | sed "s/$vmware_template/$srv_name/ig"`" \; 
   
@@ -93,16 +93,19 @@ for index in "${!vmware_list[@]}"; do
   find "$vmware_home/$vmware/" -name "$srv_name\.*" -exec sed -i "s/$vmware_template/$srv_name/ig" {} \;  
   
   # force vmware to generate a new mac address (remove lines that begin with...):
-  print_level2 "4- force vmware to generate a new mac address"
-  sed -i '/^ethernet0.addressType/d' "$vmware_home/$vmware/$srv_name.vmx"
-  sed -i '/^uuid.location/d' "$vmware_home/$vmware/$srv_name.vmx"
-  sed -i '/^uuid.bios/d' "$vmware_home/$vmware/$srv_name.vmx"
-  sed -i '/^ethernet0.generatedAddress/d' "$vmware_home/$vmware/$srv_name.vmx"
-  sed -i '/^ethernet0.generatedAddressOffset/d' "$vmware_home/$vmware/$srv_name.vmx"
+  # print_level2 "4- force vmware to generate a new mac address"
+  # sed -i '/^ethernet0.addressType/d' "$vmware_home/$vmware/$srv_name.vmx"
+  # sed -i '/^uuid.location/d' "$vmware_home/$vmware/$srv_name.vmx"
+  # sed -i '/^uuid.bios/d' "$vmware_home/$vmware/$srv_name.vmx"
+  # sed -i '/^ethernet0.generatedAddress/d' "$vmware_home/$vmware/$srv_name.vmx"
+  # sed -i '/^ethernet0.generatedAddressOffset/d' "$vmware_home/$vmware/$srv_name.vmx"
   
   # now launch vmware:
   print_level2 "5- now launch vmware"
-  "$vmware_exe" "$vmware_home/$vmware/$srv_name.vmx"
+  cd "$vmware_home/$vmware"  
+  "$vmware_exe" "$srv_name.vmx" &
+  cd -
+  
 done
 
 exit;
