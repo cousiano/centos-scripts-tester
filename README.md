@@ -2,13 +2,13 @@ centos-scripts-tester
 =====================
 
 bash scripts to test 'centos-scripts'<br>
-Note: This example use cygwin. But also works on an unix system : just update the parameters section.
+Please read/update the parameters section.
 
 Prerequistes
 ============
 
-- Install a fresh centos (in directory /opt/centos-tester, named centos)
-  => Note: you should have the following path to your virtual machine /opt/centos-tester/centos/centos.vmx
+- Install a fresh centos (in directory /opt/script-tester, named CentOS 64-bit)
+  => Note: you should have the following path to your virtual machine /opt/script-tester/CentOS 64-bit/CentOS 64-bit.vmx
 - Get the centos-scripts
 - Install prerequistes
 - Shutdown computer

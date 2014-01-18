@@ -7,9 +7,9 @@ echo "CENTOS - TESTER"
 ################################
 vmware_exe="/cygdrive/c/Program Files (x86)/VMware/VMware Player/vmplayer.exe"
 
-vmware_home="/opt/centos-tester"
-vmware_template="centos"
-vmware_list=("SCM/srv-scm" "Production/srv-monitoring" "Production/srv-redmine" "Production/srv-intranet" "Build/srv-build-linux" "Build/srv-cit" "Network/srv-mail" "Network/srv-dhcp" "Network/srv-dns" "Network/srv-ldap" "Network/srv-vpn" "Other/srv-tomcat" "Other/srv-ftp" "Other/srv-samba" "Other/srv-nfs")
+vmware_home="/opt/script-tester"
+vmware_template="CentOS 64-bit"
+vmware_list=("SCM/srv-scm" "Production/srv-monitoring" "Production/srv-redmine" "Production/srv-intranet" "Build/srv-build-linux" "Build/srv-cit" "Network/srv-mail" "Network/srv-dhcp" "Network/srv-dns" "Network/srv-ldap" "Network/srv-vpn" "Other/srv-ftp" "Other/srv-tomcat" "Other/srv-samba" "Other/srv-nfs")
 
 ################################
 # PREREQUISTES
