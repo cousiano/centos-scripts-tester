@@ -1,8 +1,8 @@
 centos-scripts-tester
 =====================
 
-bash scripts to test 'centos-scripts'
-Note: This example use cygwin, but also work in an unix system. Just update the parameters section.
+bash scripts to test 'centos-scripts'<br>
+Note: This example use cygwin. But also work in an unix system : just update the parameters section.
 
 Prerequistes
 ============
